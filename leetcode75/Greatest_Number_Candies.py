@@ -3,7 +3,10 @@ from typing import List
 
 
 class Solution:
+    """Solution class"""
+
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        """if after giving the ith kid all the extraCandies, they will have the greatest number of candies"""
         # adding extraCandies to each element
         new_values = [x + extraCandies for x in candies]
 
@@ -11,7 +14,10 @@ class Solution:
 
 
 class TestGreatestCandies(unittest.TestCase):
+    """Test cases"""
+
     def test_greatest_candies(self):
+        """Test"""
         solution = Solution()
         self.assertEqual(
             solution.kidsWithCandies([2, 3, 5, 1, 3], 3),

@@ -2,7 +2,10 @@ import unittest
 
 
 class Solution:
+    """Solution class"""
+
     def mergeAlternately(self, word1: str, word2: str) -> str:
+        """Merge the strings by adding letters in alternating order"""
         result = []
         i, j = 0, 0
 
@@ -24,12 +27,16 @@ class Solution:
 
 
 class TestMergeStrings(unittest.TestCase):
+    """Test cases"""
+
     def test_merge_strings(self):
+        """Test"""
         solution = Solution()
         self.assertEqual(solution.mergeAlternately("abc", "pqr"), "apbqcr")
         self.assertEqual(solution.mergeAlternately("hello", "world"), "hweolrllod")
 
     def test_merge_strings_different_lengths(self):
+        """Test"""
         solution = Solution()
         self.assertEqual(solution.mergeAlternately("ab", "pqrs"), "apbqrs")
         self.assertEqual(solution.mergeAlternately("abcd", "pq"), "apbqcd")
